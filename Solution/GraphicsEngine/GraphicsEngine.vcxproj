@@ -45,7 +45,7 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level4</WarningLevel>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\Libs3rdParty\SDL2\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)CommonLibs\;$(SolutionDir)..\Libs3rdParty\SDL2\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Lib>
       <AdditionalLibraryDirectories>$(SolutionDir)..\Libs3rdParty\SDL2\lib\x64\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -59,7 +59,7 @@
     <ClCompile>
       <WarningLevel>Level4</WarningLevel>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\Libs3rdParty\SDL2\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)CommonLibs\;$(SolutionDir)..\Libs3rdParty\SDL2\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Lib>
       <AdditionalLibraryDirectories>$(SolutionDir)..\Libs3rdParty\SDL2\lib\x64\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
