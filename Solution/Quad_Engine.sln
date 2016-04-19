@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CommonLibs", "CommonLibs\Co
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Game_Client", "Game_Client\Game_Client.vcxproj", "{EA3C157D-8E49-4AA1-B378-CF0DD3DFFEFF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Input Manager", "Input Manager\Input Manager.vcxproj", "{62E18665-0D57-45EC-B94A-98186741733B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,10 @@ Global
 		{EA3C157D-8E49-4AA1-B378-CF0DD3DFFEFF}.Debug|x64.Build.0 = Debug|x64
 		{EA3C157D-8E49-4AA1-B378-CF0DD3DFFEFF}.Release|x64.ActiveCfg = Release|x64
 		{EA3C157D-8E49-4AA1-B378-CF0DD3DFFEFF}.Release|x64.Build.0 = Release|x64
+		{62E18665-0D57-45EC-B94A-98186741733B}.Debug|x64.ActiveCfg = Debug|x64
+		{62E18665-0D57-45EC-B94A-98186741733B}.Debug|x64.Build.0 = Debug|x64
+		{62E18665-0D57-45EC-B94A-98186741733B}.Release|x64.ActiveCfg = Release|x64
+		{62E18665-0D57-45EC-B94A-98186741733B}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,5 +56,6 @@ Global
 		{A8E973E6-EEE4-480B-92F4-B42DC9ACF0FB} = {F7C09CC8-1284-476F-ABAE-6638393FB81E}
 		{80C23DD5-3548-4459-9560-B5719588564E} = {B9142086-ED93-4FD6-8731-C20D3FD41A89}
 		{EA3C157D-8E49-4AA1-B378-CF0DD3DFFEFF} = {6B6822BF-FFE7-4DC4-94DF-D1EBD1F0DA17}
+		{62E18665-0D57-45EC-B94A-98186741733B} = {B9142086-ED93-4FD6-8731-C20D3FD41A89}
 	EndGlobalSection
 EndGlobal
