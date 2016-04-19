@@ -28,5 +28,6 @@ namespace CommonLibs
 				Type myB;
 			};
 		};
-	}
-}
+	};
+};
+namespace CL = CommonLibs;

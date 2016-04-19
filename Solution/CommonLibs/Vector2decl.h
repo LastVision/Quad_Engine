@@ -23,5 +23,6 @@ namespace CommonLibs
 				Type myG;
 			};
 		};
-	}
-}
+	};
+};
+namespace CL = CommonLibs;

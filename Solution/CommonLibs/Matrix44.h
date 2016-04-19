@@ -568,5 +568,6 @@ namespace CommonLibs
 			aMatrixEntry[1] = vector.y;
 			aMatrixEntry[2] = vector.z;
 		}
-	}
-}
+	};
+};
+namespace CL = CommonLibs;

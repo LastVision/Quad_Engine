@@ -209,5 +209,6 @@ namespace CommonLibs
 		{
 			return Vector2<T>(-aVector.myX, -aVector.myY);
 		}
-	}
-}
+	};
+};
+namespace CL = CommonLibs;

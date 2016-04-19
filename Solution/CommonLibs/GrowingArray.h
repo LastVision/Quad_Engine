@@ -68,7 +68,7 @@ namespace CommonLibs
 
 	};
 };
-
+namespace CL = CommonLibs;
 namespace CommonLibs
 {
 	GA_TEMPLATE
@@ -445,3 +445,4 @@ namespace CommonLibs
 		return myData;
 	}
 };
+namespace CL = CommonLibs;

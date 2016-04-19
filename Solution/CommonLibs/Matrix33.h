@@ -381,5 +381,6 @@ namespace CommonLibs
 		{
 			return CU::Vector3<T>(myMatrix[6], myMatrix[7], myMatrix[8]);
 		}
-	}
-}
+	};
+};
+namespace CL = CommonLibs;

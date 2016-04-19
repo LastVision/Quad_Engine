@@ -27,7 +27,8 @@ namespace CommonLibs
 	private:
 		Type myData[Size];
 	};
-}
+};
+namespace CL = CommonLibs;
 
 namespace CommonLibs
 {
@@ -94,4 +95,5 @@ namespace CommonLibs
 			myData[i] = nullptr;
 		}
 	}
-}
+};
+namespace CL = CommonLibs;

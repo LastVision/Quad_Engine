@@ -43,5 +43,6 @@ namespace CommonLibs
 		private:
 			void NormalizeVector(T* aMatrixEntry);
 		};
-	}
-}
+	};
+};
+namespace CL = CommonLibs;

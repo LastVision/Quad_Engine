@@ -37,5 +37,6 @@ namespace CommonLibs
 				return *this;
 			}
 		};
-	}
-}
+	};
+};
+namespace CL = CommonLibs;

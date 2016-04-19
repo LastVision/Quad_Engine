@@ -37,6 +37,11 @@ namespace Quad_Engine
 		CreateRenderer();
 	}
 
+	void SDLInterface::SetClearColor(const CL::Math::Vector4<float>& aClearColor)
+	{
+		SDL_SetRenderDrawColor(myRenderer, aClearColor.myR, aClearColor.myG, aClearColor.myB, aClearColor.myA);
+	}
+
 	void SDLInterface::Clear()
 	{
 		SDL_RenderClear(myRenderer);

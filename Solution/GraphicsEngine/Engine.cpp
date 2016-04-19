@@ -50,22 +50,6 @@ namespace Quad_Engine
 		mySDLInterface = nullptr;
 	}
 
-	void Engine::AddCallback(const eEngineCallbacks aCallbackType, const std::function<void()>& aFunction)
-	{
-		switch (aCallbackType)
-		{
-		case eEngineCallbacks::UPDATE:
-			myCallbacks[static_cast<int>(eEngineCallbacks::UPDATE)].Add(aFunction);
-			break;
-		case eEngineCallbacks::RENDER:
-			myCallbacks[static_cast<int>(eEngineCallbacks::RENDER)].Add(aFunction);
-			break;
-		default:
-			printf("Could not add callback to unkown types!");
-			break;
-		}
-	}
-
 	void Engine::Run()
 	{
 		SDL_Event event;
@@ -86,6 +70,27 @@ namespace Quad_Engine
 			Update();
 			Render();
 		}
+	}
+
+	void Engine::AddCallback(const eEngineCallbacks aCallbackType, const std::function<void()>& aFunction)
+	{
+		switch (aCallbackType)
+		{
+		case eEngineCallbacks::UPDATE:
+			myCallbacks[static_cast<int>(eEngineCallbacks::UPDATE)].Add(aFunction);
+			break;
+		case eEngineCallbacks::RENDER:
+			myCallbacks[static_cast<int>(eEngineCallbacks::RENDER)].Add(aFunction);
+			break;
+		default:
+			printf("Could not add callback to unkown types!");
+			break;
+		}
+	}
+
+	void Engine::SetClearColor(const CommonLibs::Math::Vector4<float>& aClearColor)
+	{
+		mySDLInterface->SetClearColor(aClearColor);
 	}
 
 	void Engine::Render()
