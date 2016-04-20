@@ -43,7 +43,7 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level4</WarningLevel>
-      <AdditionalIncludeDirectories>$(SolutionDir)Input Manager\;$(SolutionDir)CommonLibs\;$(SolutionDir)Game_Client\;$(SolutionDir)GraphicsEngine\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)TimerManager\;$(SolutionDir)Input Manager\;$(SolutionDir)CommonLibs\;$(SolutionDir)Game_Client\;$(SolutionDir)GraphicsEngine\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -54,7 +54,7 @@
     <ClCompile>
       <WarningLevel>Level4</WarningLevel>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <AdditionalIncludeDirectories>$(SolutionDir)Input Manager\;$(SolutionDir)CommonLibs\;$(SolutionDir)Game_Client\;$(SolutionDir)GraphicsEngine\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)TimerManager\;$(SolutionDir)Input Manager\;$(SolutionDir)CommonLibs\;$(SolutionDir)Game_Client\;$(SolutionDir)GraphicsEngine\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -79,6 +79,9 @@
     </ProjectReference>
     <ProjectReference Include="..\Input Manager\Input Manager.vcxproj">
       <Project>{62e18665-0d57-45ec-b94a-98186741733b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\TimerManager\TimerManager.vcxproj">
+      <Project>{1e25099e-6d54-4564-ba12-3872ba2e315f}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

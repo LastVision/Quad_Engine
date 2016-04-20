@@ -2,6 +2,8 @@
 
 #include "Engine.h"
 #include <InputManager.h>
+#include <TimerManager.h>
+#include "ResourceManager.h"
 #include <SDL.h>
 namespace Quad_Engine
 {
@@ -43,11 +45,17 @@ namespace Quad_Engine
 			myCallbacks[i].Init(16);
 		}
 		CL::InputManager::Create();
+		myResourceManager = new ResourceManager();
+		myTimerManager = new CL::Time::TimerManager();
 	}
 
 	Engine::~Engine()
 	{
 		CL::InputManager::Destroy();
+		delete myTimerManager;
+		myTimerManager = nullptr;
+		delete myResourceManager;
+		myResourceManager = nullptr;
 
 		delete mySDLInterface;
 		mySDLInterface = nullptr;
@@ -58,6 +66,9 @@ namespace Quad_Engine
 		SDL_Event event;
 		while (myIsRunning == true)
 		{
+			myTimerManager->Update();
+			/*myFPS = myTimerManager->GetMasterTimer().GetTime().GetFPS();*/
+			myDeltaTime = myTimerManager->GetMasterTimer().GetTime().GetFrameTime();
 			CL::InputManager::GetInstance()->OnBeginFrame();
 			while (SDL_PollEvent(&event) != 0)
 			{
@@ -101,6 +112,11 @@ namespace Quad_Engine
 	void Engine::SetClearColor(const CommonLibs::Math::Vector4<float>& aClearColor)
 	{
 		mySDLInterface->SetClearColor(aClearColor);
+	}
+
+	SDL_Renderer* Engine::GetRenderer() const
+	{
+		return mySDLInterface->GetRenderer();
 	}
 
 	void Engine::Render()

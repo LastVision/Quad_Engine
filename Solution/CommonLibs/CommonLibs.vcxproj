@@ -64,6 +64,7 @@
     <ClInclude Include="Matrix33decl.h" />
     <ClInclude Include="Matrix44.h" />
     <ClInclude Include="Matrix44decl.h" />
+    <ClInclude Include="Quad.h" />
     <ClInclude Include="StaticArray.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Vector.h" />

@@ -19,6 +19,9 @@
     <Filter Include="Container\Array">
       <UniqueIdentifier>{ff19b556-9eef-4c6a-a2f6-ef3cbe1632e5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Math\Shapes">
+      <UniqueIdentifier>{b17e503d-9e9c-4d71-b884-9b09f3558d0c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -73,6 +76,9 @@
     </ClInclude>
     <ClInclude Include="StaticArray.h">
       <Filter>Container\Array</Filter>
+    </ClInclude>
+    <ClInclude Include="Quad.h">
+      <Filter>Math\Shapes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

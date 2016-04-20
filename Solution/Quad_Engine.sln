@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Game_Client", "Game_Client\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Input Manager", "Input Manager\Input Manager.vcxproj", "{62E18665-0D57-45EC-B94A-98186741733B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TimerManager", "TimerManager\TimerManager.vcxproj", "{1E25099E-6D54-4564-BA12-3872BA2E315F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -47,6 +49,10 @@ Global
 		{62E18665-0D57-45EC-B94A-98186741733B}.Debug|x64.Build.0 = Debug|x64
 		{62E18665-0D57-45EC-B94A-98186741733B}.Release|x64.ActiveCfg = Release|x64
 		{62E18665-0D57-45EC-B94A-98186741733B}.Release|x64.Build.0 = Release|x64
+		{1E25099E-6D54-4564-BA12-3872BA2E315F}.Debug|x64.ActiveCfg = Debug|x64
+		{1E25099E-6D54-4564-BA12-3872BA2E315F}.Debug|x64.Build.0 = Debug|x64
+		{1E25099E-6D54-4564-BA12-3872BA2E315F}.Release|x64.ActiveCfg = Release|x64
+		{1E25099E-6D54-4564-BA12-3872BA2E315F}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,5 +63,6 @@ Global
 		{80C23DD5-3548-4459-9560-B5719588564E} = {B9142086-ED93-4FD6-8731-C20D3FD41A89}
 		{EA3C157D-8E49-4AA1-B378-CF0DD3DFFEFF} = {6B6822BF-FFE7-4DC4-94DF-D1EBD1F0DA17}
 		{62E18665-0D57-45EC-B94A-98186741733B} = {B9142086-ED93-4FD6-8731-C20D3FD41A89}
+		{1E25099E-6D54-4564-BA12-3872BA2E315F} = {B9142086-ED93-4FD6-8731-C20D3FD41A89}
 	EndGlobalSection
 EndGlobal
