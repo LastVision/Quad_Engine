@@ -16,5 +16,6 @@
       <Filter>PreCompile</Filter>
     </ClInclude>
     <ClInclude Include="InputManager.h" />
+    <ClInclude Include="KeyEnums.h" />
   </ItemGroup>
 </Project>

@@ -43,7 +43,7 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level4</WarningLevel>
-      <AdditionalIncludeDirectories>$(SolutionDir)CommonLibs\;$(SolutionDir)Game_Client\;$(SolutionDir)GraphicsEngine\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Input Manager\;$(SolutionDir)CommonLibs\;$(SolutionDir)Game_Client\;$(SolutionDir)GraphicsEngine\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -54,7 +54,7 @@
     <ClCompile>
       <WarningLevel>Level4</WarningLevel>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <AdditionalIncludeDirectories>$(SolutionDir)CommonLibs\;$(SolutionDir)Game_Client\;$(SolutionDir)GraphicsEngine\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Input Manager\;$(SolutionDir)CommonLibs\;$(SolutionDir)Game_Client\;$(SolutionDir)GraphicsEngine\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -68,11 +68,17 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CommonLibs\CommonLibs.vcxproj">
+      <Project>{80c23dd5-3548-4459-9560-b5719588564e}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Game_Client\Game_Client.vcxproj">
       <Project>{ea3c157d-8e49-4aa1-b378-cf0dd3dffeff}</Project>
     </ProjectReference>
     <ProjectReference Include="..\GraphicsEngine\GraphicsEngine.vcxproj">
       <Project>{a8e973e6-eee4-480b-92f4-b42dc9acf0fb}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Input Manager\Input Manager.vcxproj">
+      <Project>{62e18665-0d57-45ec-b94a-98186741733b}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

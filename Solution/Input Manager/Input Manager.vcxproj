@@ -68,6 +68,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="InputManager.h" />
+    <ClInclude Include="KeyEnums.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>

@@ -1,7 +1,7 @@
 #include "stdafx.h"
 
-
 #include "Engine.h"
+#include <InputManager.h>
 #include <SDL.h>
 namespace Quad_Engine
 {
@@ -42,10 +42,13 @@ namespace Quad_Engine
 		{
 			myCallbacks[i].Init(16);
 		}
+		CL::InputManager::Create();
 	}
 
 	Engine::~Engine()
 	{
+		CL::InputManager::Destroy();
+
 		delete mySDLInterface;
 		mySDLInterface = nullptr;
 	}
@@ -55,12 +58,19 @@ namespace Quad_Engine
 		SDL_Event event;
 		while (myIsRunning == true)
 		{
+			CL::InputManager::GetInstance()->OnBeginFrame();
 			while (SDL_PollEvent(&event) != 0)
 			{
 				switch (event.type)	
 				{
 				case SDL_QUIT:
 					myIsRunning = false;
+					break;
+				case SDL_KEYDOWN:
+					CL::InputManager::GetInstance()->OnSDLKeyDown(event.key.keysym.scancode);
+					break;
+				case SDL_KEYUP:
+					CL::InputManager::GetInstance()->OnSDLKeyUp(event.key.keysym.scancode);
 					break;
 				default:
 					break;

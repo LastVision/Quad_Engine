@@ -5,7 +5,7 @@
 void main()
 {
 	Quad_Engine::Engine::Create();
-	Quad_Engine::Engine::GetInstance()->SetClearColor({ 0xFF, 0x00, 0x00, 0xFF });
+	Quad_Engine::Engine::GetInstance()->SetClearColor({ 255, 100, 100, 255 });
 	GameClient* game = new GameClient();
 	Quad_Engine::Engine::GetInstance()->Run();
 	delete game;
