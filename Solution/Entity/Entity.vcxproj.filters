@@ -4,26 +4,27 @@
     <Filter Include="PreCompile">
       <UniqueIdentifier>{a126e6e9-b2c6-4b0e-9706-e5462ebaee57}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Level">
-      <UniqueIdentifier>{67dc2f17-3fac-4cea-b7ed-e8829cfc0c75}</UniqueIdentifier>
+    <Filter Include="Component">
+      <UniqueIdentifier>{9f22a809-9df2-4bbe-a012-27f7d313f100}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>PreCompile</Filter>
     </ClCompile>
-    <ClCompile Include="GameClient.cpp" />
-    <ClCompile Include="Level.cpp">
-      <Filter>Level</Filter>
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="Component.cpp">
+      <Filter>Component</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
       <Filter>PreCompile</Filter>
     </ClInclude>
-    <ClInclude Include="GameClient.h" />
-    <ClInclude Include="Level.h">
-      <Filter>Level</Filter>
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="EntityEnum.h" />
+    <ClInclude Include="Component.h">
+      <Filter>Component</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
