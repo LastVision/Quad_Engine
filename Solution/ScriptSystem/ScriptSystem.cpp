@@ -168,6 +168,13 @@ namespace Quad_Engine
 			lua_pushstring(myCurrentState, buffer);
 		}
 
+		void ScriptSystem::PushInternal(int& aCount, unsigned long long aLongLong)
+		{
+			++aCount;
+			char buffer[64];
+			sprintf_s(buffer, "%l64u", aLongLong);
+			lua_pushstring(myCurrentState, buffer);
+		}
 
 		void ScriptSystem::CheckError(int aCode, lua_State* aState)
 		{

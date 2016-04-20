@@ -60,6 +60,7 @@ namespace Quad_Engine
 			void PushInternal(int& aCount, const char* aString);
 			void PushInternal(int& aCount, bool aBool);
 			void PushInternal(int& aCount, long long aLongLong);
+			void PushInternal(int& aCount, unsigned long long aLongLong);
 			void Push(int&){};
 
 			template<typename T>T PopTop(){ return T; };
