@@ -35,6 +35,8 @@ namespace ScriptInterface
 
 		//Math Functions
 
+		//Rendering Functions
+
 		//Utilities Function
 
 	}
