@@ -12,9 +12,13 @@ public:
 
 	void Init();
 
+	void AddComponent(const std::string& aFilePath);
+
 	void Update(const float aDeltaTime);
 
 private:
+	void operator=(const Entity&) = delete;
+
 	const unsigned long long myGID;
 	const eEntityTag myTag;
 	const std::string myName;

@@ -37,24 +37,26 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Link>
-      <AdditionalLibraryDirectories>$(SolutionDir)..\Libs\;$(SolutionDir)..\Libs3rdParty\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\Libs\;$(SolutionDir)..\Libs3rdParty\;$(SolutionDir)..\Libs3rdParty\anglescript\Libs\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>angelscript64.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level4</WarningLevel>
-      <AdditionalIncludeDirectories>$(SolutionDir)TimerManager\;$(SolutionDir)Input Manager\;$(SolutionDir)CommonLibs\;$(SolutionDir)Game_Client\;$(SolutionDir)GraphicsEngine\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Libs3rdParty\anglescript\Include\addOns\;$(SolutionDir)ScriptSystem\;$(SolutionDir)CommonLibs\;$(SolutionDir)Game_Client\;$(SolutionDir)GraphicsEngine\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Link>
-      <AdditionalLibraryDirectories>$(SolutionDir)..\Libs\;$(SolutionDir)..\Libs3rdParty\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\Libs\;$(SolutionDir)..\Libs3rdParty\;$(SolutionDir)..\Libs3rdParty\anglescript\Libs\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>angelscript64d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ClCompile>
       <WarningLevel>Level4</WarningLevel>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <AdditionalIncludeDirectories>$(SolutionDir)TimerManager\;$(SolutionDir)Input Manager\;$(SolutionDir)CommonLibs\;$(SolutionDir)Game_Client\;$(SolutionDir)GraphicsEngine\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Libs3rdParty\anglescript\Include\addOns\;$(SolutionDir)ScriptSystem\;$(SolutionDir)CommonLibs\;$(SolutionDir)Game_Client\;$(SolutionDir)GraphicsEngine\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -71,6 +73,9 @@
     <ProjectReference Include="..\CommonLibs\CommonLibs.vcxproj">
       <Project>{80c23dd5-3548-4459-9560-b5719588564e}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.vcxproj">
+      <Project>{61d45df9-4afc-4123-bb3c-80eb2bb20ac8}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Game_Client\Game_Client.vcxproj">
       <Project>{ea3c157d-8e49-4aa1-b378-cf0dd3dffeff}</Project>
     </ProjectReference>
@@ -79,6 +84,9 @@
     </ProjectReference>
     <ProjectReference Include="..\Input Manager\Input Manager.vcxproj">
       <Project>{62e18665-0d57-45ec-b94a-98186741733b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\ScriptSystem\ScriptSystem.vcxproj">
+      <Project>{a1e45d52-1d85-4578-a6a7-3fffdb4eae20}</Project>
     </ProjectReference>
     <ProjectReference Include="..\TimerManager\TimerManager.vcxproj">
       <Project>{1e25099e-6d54-4564-ba12-3872ba2e315f}</Project>

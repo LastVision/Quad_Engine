@@ -4,17 +4,47 @@
     <Filter Include="PreCompile">
       <UniqueIdentifier>{a126e6e9-b2c6-4b0e-9706-e5462ebaee57}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Visual Scripting">
+      <UniqueIdentifier>{f76ad7a8-b78c-46a8-9907-e6afea150d55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="anglescript">
+      <UniqueIdentifier>{615cd04b-563c-4dfe-aa7c-5d910cebc508}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="anglescript\addOns">
+      <UniqueIdentifier>{74aef381-01c5-4661-9e93-e5531916a987}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>PreCompile</Filter>
     </ClCompile>
     <ClCompile Include="ScriptSystem.cpp" />
+    <ClCompile Include="scriptbuilder.cpp">
+      <Filter>anglescript\addOns</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptstdstring.cpp">
+      <Filter>anglescript\addOns</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptstdstring_utils.cpp">
+      <Filter>anglescript\addOns</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptarray.cpp">
+      <Filter>anglescript\addOns</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
       <Filter>PreCompile</Filter>
     </ClInclude>
     <ClInclude Include="ScriptSystem.h" />
+    <ClInclude Include="scriptbuilder.h">
+      <Filter>anglescript\addOns</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptstdstring.h">
+      <Filter>anglescript\addOns</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptarray.h">
+      <Filter>anglescript\addOns</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

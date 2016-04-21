@@ -9,6 +9,8 @@ class b2World;
 class b2Body;
 class b2PolygonShape;
 
+class Entity;
+
 namespace Quad_Engine
 {
 	class Sprite;
@@ -42,5 +44,7 @@ private:
 	//Sprite
 	Quad_Engine::Sprite* myTestSprite;
 	CL::Math::Vector2<float> myTestPosition;
+
+	Entity* myPlayer;
 };
 

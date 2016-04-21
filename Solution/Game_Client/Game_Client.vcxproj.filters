@@ -7,6 +7,9 @@
     <Filter Include="Level">
       <UniqueIdentifier>{67dc2f17-3fac-4cea-b7ed-e8829cfc0c75}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Script">
+      <UniqueIdentifier>{3fcdd2d3-af54-4300-a3a8-9778801718e1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -16,6 +19,9 @@
     <ClCompile Include="Level.cpp">
       <Filter>Level</Filter>
     </ClCompile>
+    <ClCompile Include="ScriptInterface.cpp">
+      <Filter>Script</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -24,6 +30,9 @@
     <ClInclude Include="GameClient.h" />
     <ClInclude Include="Level.h">
       <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptInterface.h">
+      <Filter>Script</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

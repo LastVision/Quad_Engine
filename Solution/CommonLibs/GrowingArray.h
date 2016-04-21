@@ -84,7 +84,7 @@ namespace CommonLibs
 	GA_TEMPLATE
 		inline GA_TYPE::GrowingArray(SizeType aNrOfRecommendedItems, bool aUseSafeModeFlag = true)
 	{
-		assert(aNrOfRecommendedItems > 0, "Can't create GrowingArray smaller than 1.");
+		assert(aNrOfRecommendedItems > 0 && "Can't create GrowingArray smaller than 1.");
 
 		myIsInit = false;
 		Init(aNrOfRecommendedItems, aUseSafeModeFlag);
@@ -137,8 +137,8 @@ namespace CommonLibs
 	GA_TEMPLATE
 		inline void GA_TYPE::Init(SizeType aNrOfRecommendedItems, bool aUseSafeModeFlag = true)
 	{
-		assert(myIsInit == false, "Can't call Init twice, use ReInit() instead");
-		assert(aNrOfRecommendedItems > 0, "Can't create GrowingArray smaller than 1.");
+		assert(myIsInit == false && "Can't call Init twice, use ReInit() instead");
+		assert(aNrOfRecommendedItems > 0 && "Can't create GrowingArray smaller than 1.");
 
 		myIsInit = true;
 		myCurrentSize = 0;
@@ -151,7 +151,7 @@ namespace CommonLibs
 	GA_TEMPLATE
 		inline void GA_TYPE::ReInit(SizeType aNrOfRecommendedItems, bool aUseSafeModeFlag = true)
 	{
-		assert(myIsInit == true, "Can't call ReInit before Init.");
+		assert(myIsInit == true && "Can't call ReInit before Init.");
 		delete[] myData;
 		myIsInit = false;
 		Init(aNrOfRecommendedItems, aUseSafeModeFlag);
@@ -169,25 +169,25 @@ namespace CommonLibs
 	GA_TEMPLATE
 		inline ObjectType& GA_TYPE::operator[](const SizeType& aIndex)
 	{
-		assert(myIsInit == true, "Not initialized, run Init first.");
-		assert(aIndex >= 0, "Index has to be 0 or more.");
-		assert(aIndex < myCurrentSize, "a index out of bounds!");
+		assert(myIsInit == true && "Not initialized, run Init first.");
+		assert(aIndex >= 0 && "Index has to be 0 or more.");
+		assert(aIndex < myCurrentSize && "a index out of bounds!");
 		return myData[aIndex];
 	}
 
 	GA_TEMPLATE
 		inline const ObjectType& GA_TYPE::operator[](const SizeType& aIndex) const
 	{
-		assert(myIsInit == true, "Not initialized, run Init first.");
-		assert(aIndex >= 0, "Index has to be 0 or more.");
-		assert(aIndex < myCurrentSize, "a index out of bounds!");
+		assert(myIsInit == true && "Not initialized, run Init first.");
+		assert(aIndex >= 0 && "Index has to be 0 or more.");
+		assert(aIndex < myCurrentSize && "a index out of bounds!");
 		return myData[aIndex];
 	}
 
 	GA_TEMPLATE
 		inline void GA_TYPE::Add(const ObjectType& aObject)
 	{
-		assert(myIsInit == true, "Not initialized, run Init first.");
+		assert(myIsInit == true && "Not initialized, run Init first.");
 		if (myCurrentSize >= myMaxSize)
 		{
 			Resize(myMaxSize * 2);
@@ -198,7 +198,7 @@ namespace CommonLibs
 	GA_TEMPLATE
 		inline void GA_TYPE::AddEmptyObject()
 	{
-		assert(myIsInit == true, "Not initialized, run Init first.");
+		assert(myIsInit == true && "Not initialized, run Init first.");
 
 		if (myCurrentSize == myMaxSize)
 		{
@@ -211,9 +211,9 @@ namespace CommonLibs
 	GA_TEMPLATE
 		inline void GA_TYPE::Insert(SizeType aIndex, const ObjectType& aObject)
 	{
-		assert(myIsInit == true, "Not initialized, run Init first.");
-		assert(aIndex >= 0, "Index has to be 0 or more.");
-		assert(aIndex < myCurrentSize, "a index out of bounds!");
+		assert(myIsInit == true && "Not initialized, run Init first.");
+		assert(aIndex >= 0 && "Index has to be 0 or more.");
+		assert(aIndex < myCurrentSize && "a index out of bounds!");
 		if (myCurrentSize >= myMaxSize)
 		{
 			Resize(myMaxSize * 2);
@@ -233,7 +233,7 @@ namespace CommonLibs
 	GA_TEMPLATE
 		inline void GA_TYPE::InsertFirst(const ObjectType& aObject)
 	{
-		assert(myIsInit == true, "Not initialized, run Init first.");
+		assert(myIsInit == true && "Not initialized, run Init first.");
 
 		if (myCurrentSize == 0)
 		{
@@ -248,7 +248,7 @@ namespace CommonLibs
 	GA_TEMPLATE
 		inline void GA_TYPE::DeleteCyclic(ObjectType& aObject)
 	{
-		assert(myIsInit == true, "Not initialized, run Init first.");
+		assert(myIsInit == true && "Not initialized, run Init first.");
 		for (SizeType i = 0; i < myCurrentSize; ++i)
 		{
 			if (myData[i] == aObject)
@@ -263,9 +263,9 @@ namespace CommonLibs
 	GA_TEMPLATE
 		inline void GA_TYPE::DeleteCyclicAtIndex(SizeType aItemNumber)
 	{
-		assert(myIsInit == true, "Not initialized, run Init first.");
-		assert(aItemNumber >= 0, "Index has to be 0 or more.");
-		assert(aItemNumber < myCurrentSize, "a index out of bounds!");
+		assert(myIsInit == true && "Not initialized, run Init first.");
+		assert(aItemNumber >= 0 && "Index has to be 0 or more.");
+		assert(aItemNumber < myCurrentSize && "a index out of bounds!");
 		delete myData[aItemNumber];
 		myData[aItemNumber] = nullptr;
 		myData[aItemNumber] = myData[--myCurrentSize];
@@ -274,9 +274,9 @@ namespace CommonLibs
 	GA_TEMPLATE
 		inline void GA_TYPE::DeleteNonCyclicAtIndex(SizeType aItemNumber)
 	{
-		assert(myIsInit == true, "Not initialized, run Init first.");
-		assert(aItemNumber >= 0, "Index has to be 0 or more.");
-		assert(aItemNumber < myCurrentSize, "a index out of bounds!");
+		assert(myIsInit == true && "Not initialized, run Init first.");
+		assert(aItemNumber >= 0 && "Index has to be 0 or more.");
+		assert(aItemNumber < myCurrentSize && "a index out of bounds!");
 		delete myData[aItemNumber];
 		myData[aItemNumber] = nullptr;
 
@@ -291,7 +291,7 @@ namespace CommonLibs
 	GA_TEMPLATE
 		inline void GA_TYPE::RemoveCyclic(const ObjectType& aObject)
 	{
-		assert(myIsInit == true, "Not initialized, run Init first.");
+		assert(myIsInit == true && "Not initialized, run Init first.");
 
 		for (SizeType i = 0; i < myCurrentSize; ++i)
 		{
@@ -307,16 +307,16 @@ namespace CommonLibs
 	GA_TEMPLATE
 		inline void GA_TYPE::RemoveCyclicAtIndex(SizeType aItemNumber)
 	{
-		assert(myIsInit == true, "Not initialized, run Init first.");
-		assert(aItemNumber >= 0, "Index has to be 0 or more.");
-		assert(aItemNumber < myCurrentSize, "a index out of bounds!");
+		assert(myIsInit == true && "Not initialized, run Init first.");
+		assert(aItemNumber >= 0 && "Index has to be 0 or more.");
+		assert(aItemNumber < myCurrentSize && "a index out of bounds!");
 		myData[aItemNumber] = myData[--myCurrentSize];
 	}
 
 	GA_TEMPLATE
 		inline void GA_TYPE::RemoveNonCyclic(const ObjectType& aObject)
 	{
-		assert(myIsInit == true, "Not initialized, run Init first.");
+		assert(myIsInit == true && "Not initialized, run Init first.");
 
 		for (SizeType i = 0; i < myCurrentSize; ++i)
 		{
@@ -333,9 +333,9 @@ namespace CommonLibs
 	GA_TEMPLATE
 		inline void GA_TYPE::RemoveNonCyclicAtIndex(SizeType aItemNumber)
 	{
-		assert(myIsInit == true, "Not initialized, run Init first.");
-		assert(aItemNumber >= 0, "Index has to be 0 or more.");
-		assert(aItemNumber < myCurrentSize, "a index out of bounds!");
+		assert(myIsInit == true && "Not initialized, run Init first.");
+		assert(aItemNumber >= 0 && "Index has to be 0 or more.");
+		assert(aItemNumber < myCurrentSize && "a index out of bounds!");
 
 		for (SizeType i = aItemNumber; i < myCurrentSize - 1; ++i)
 		{
@@ -347,7 +347,7 @@ namespace CommonLibs
 	GA_TEMPLATE
 		inline SizeType GA_TYPE::Find(const ObjectType& aObject) const
 	{
-		assert(myIsInit == true, "Not initialized, run Init first.");
+		assert(myIsInit == true && "Not initialized, run Init first.");
 
 		for (SizeType i = 0; i < myCurrentSize; ++i)
 		{
@@ -362,28 +362,28 @@ namespace CommonLibs
 	GA_TEMPLATE
 		inline ObjectType& GA_TYPE::GetLast()
 	{
-		assert(myIsInit == true, "Not initialized, run Init first.");
+		assert(myIsInit == true && "Not initialized, run Init first.");
 		return myData[myCurrentSize - 1];
 	}
 
 	GA_TEMPLATE
 		inline const ObjectType& GA_TYPE::GetLast() const
 	{
-		assert(myIsInit == true, "Not initialized, run Init first.");
+		assert(myIsInit == true && "Not initialized, run Init first.");
 		return myData[myCurrentSize - 1];
 	}
 
 	GA_TEMPLATE
 		inline void GA_TYPE::RemoveAll()
 	{
-		assert(myIsInit == true, "Not initialized, run Init first.");
+		assert(myIsInit == true && "Not initialized, run Init first.");
 		myCurrentSize = 0;
 	}
 
 	GA_TEMPLATE
 		inline void GA_TYPE::DeleteAll()
 	{
-		assert(myIsInit == true, "Not initialized, run Init first.");
+		assert(myIsInit == true && "Not initialized, run Init first.");
 		for (SizeType i = 0; i < myCurrentSize; ++i)
 		{
 			delete myData[i];
@@ -395,7 +395,7 @@ namespace CommonLibs
 	GA_TEMPLATE
 		inline void GA_TYPE::Optimize()
 	{
-		assert(myIsInit == true, "Not initialized, run Init first.");
+		assert(myIsInit == true && "Not initialized, run Init first.");
 		myMaxSize = myCurrentSize;
 		if (myMaxSize < 1)
 		{
@@ -419,8 +419,8 @@ namespace CommonLibs
 	GA_TEMPLATE
 		inline void GA_TYPE::Resize(int aNewSize)
 	{
-		assert(myIsInit == true, "Not initialized, run Init first.");
-		assert(aNewSize > 0, "Can't make GrowingArray smaller than 1.");
+		assert(myIsInit == true && "Not initialized, run Init first.");
+		assert(aNewSize > 0 && "Can't make GrowingArray smaller than 1.");
 
 		ObjectType* newData = new ObjectType[aNewSize];
 		if (myUseSafeModeFlag == true)

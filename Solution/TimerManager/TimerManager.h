@@ -48,7 +48,7 @@ namespace CommonLibs
 		inline TimerHandle TimerManager::CreateTimer()
 		{
 			myTimerList.push_back(Timer());
-			return myTimerList.size() - 1;
+			return static_cast<TimerHandle>(myTimerList.size() - 1);
 		}
 
 		inline const Timer& TimerManager::GetTimer(TimerHandle aID) const

@@ -24,6 +24,11 @@ void Entity::Init()
 	}
 }
 
+void Entity::AddComponent(const std::string& aFilePath)
+{
+	myComponents.Add(new Component(aFilePath));
+}
+
 void Entity::Update(const float aDeltaTime)
 {
 	for each (Component* component in myComponents)

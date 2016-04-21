@@ -1,6 +1,7 @@
 #include "stdafx.h"
 
 #include <Engine.h>
+#include <Entity.h>
 #include <Box2D.h>
 #include "Level.h"
 #include <InputManager.h>
@@ -38,6 +39,10 @@ Level::Level()
 	myCharacterFixtureDef->friction = 0.3f;
 
 	myCharacterBody->CreateFixture(myCharacterFixtureDef);
+
+	myPlayer = new Entity(0);
+	myPlayer->AddComponent("Data/Script/helloWorld.as");
+	myPlayer->Init();
 }
 
 Level::~Level()
@@ -57,7 +62,8 @@ void Level::Update(const float aDeltaTime)
 {
 	myWorld->Step(aDeltaTime, 6, 2);
 	myTestPosition = ConvertToFromBox2DVecToVector(myCharacterBody->GetPosition());
-	printf("Pos: (X: %f, Y: %f)\n", myTestPosition.myX, myTestPosition.myY);
+	myPlayer->Update(aDeltaTime);
+	//printf("Pos: (X: %f, Y: %f)\n", myTestPosition.myX, myTestPosition.myY);
 
 	if (CL::InputManager::GetInstance()->IsKeyDown(KEY::KEY_UP) == true)
 	{
