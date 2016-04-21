@@ -7,10 +7,10 @@
     <Filter Include="Visual Scripting">
       <UniqueIdentifier>{f76ad7a8-b78c-46a8-9907-e6afea150d55}</UniqueIdentifier>
     </Filter>
-    <Filter Include="anglescript">
+    <Filter Include="angelscript">
       <UniqueIdentifier>{615cd04b-563c-4dfe-aa7c-5d910cebc508}</UniqueIdentifier>
     </Filter>
-    <Filter Include="anglescript\addOns">
+    <Filter Include="angelscript\addOns">
       <UniqueIdentifier>{74aef381-01c5-4661-9e93-e5531916a987}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -20,16 +20,16 @@
     </ClCompile>
     <ClCompile Include="ScriptSystem.cpp" />
     <ClCompile Include="scriptbuilder.cpp">
-      <Filter>anglescript\addOns</Filter>
+      <Filter>angelscript\addOns</Filter>
     </ClCompile>
     <ClCompile Include="scriptstdstring.cpp">
-      <Filter>anglescript\addOns</Filter>
+      <Filter>angelscript\addOns</Filter>
     </ClCompile>
     <ClCompile Include="scriptstdstring_utils.cpp">
-      <Filter>anglescript\addOns</Filter>
+      <Filter>angelscript\addOns</Filter>
     </ClCompile>
     <ClCompile Include="scriptarray.cpp">
-      <Filter>anglescript\addOns</Filter>
+      <Filter>angelscript\addOns</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -38,13 +38,13 @@
     </ClInclude>
     <ClInclude Include="ScriptSystem.h" />
     <ClInclude Include="scriptbuilder.h">
-      <Filter>anglescript\addOns</Filter>
+      <Filter>angelscript\addOns</Filter>
     </ClInclude>
     <ClInclude Include="scriptstdstring.h">
-      <Filter>anglescript\addOns</Filter>
+      <Filter>angelscript\addOns</Filter>
     </ClInclude>
     <ClInclude Include="scriptarray.h">
-      <Filter>anglescript\addOns</Filter>
+      <Filter>angelscript\addOns</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
