@@ -45,11 +45,11 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level4</WarningLevel>
-      <AdditionalIncludeDirectories>$(SolutionDir)Entity\;$(SolutionDir)ScriptSystem\;$(SolutionDir)..\Libs3rdParty\Box2D\Include\;$(SolutionDir)TimerManager\;$(SolutionDir)Input Manager\;$(SolutionDir)CommonLibs\;$(SolutionDir)GraphicsEngine\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Libs3rdParty\anglescript\Include\;$(SolutionDir)Entity\;$(SolutionDir)ScriptSystem\;$(SolutionDir)..\Libs3rdParty\Box2D\Include\;$(SolutionDir)TimerManager\;$(SolutionDir)Input Manager\;$(SolutionDir)CommonLibs\;$(SolutionDir)GraphicsEngine\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Lib>
-      <AdditionalLibraryDirectories>$(SolutionDir)..\Libs3rdParty\Lua\Libs\x64\;$(SolutionDir)..\Libs\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>Box2D.lib;lua53.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\Libs3rdParty\anglescript\Libs\;$(SolutionDir)..\Libs\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Box2D.lib;angelscript64.lib</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -59,11 +59,11 @@
     <ClCompile>
       <WarningLevel>Level4</WarningLevel>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <AdditionalIncludeDirectories>$(SolutionDir)Entity\;$(SolutionDir)ScriptSystem\;$(SolutionDir)..\Libs3rdParty\Box2D\Include\;$(SolutionDir)TimerManager\;$(SolutionDir)Input Manager\;$(SolutionDir)CommonLibs\;$(SolutionDir)GraphicsEngine\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Libs3rdParty\anglescript\Include\;$(SolutionDir)Entity\;$(SolutionDir)ScriptSystem\;$(SolutionDir)..\Libs3rdParty\Box2D\Include\;$(SolutionDir)TimerManager\;$(SolutionDir)Input Manager\;$(SolutionDir)CommonLibs\;$(SolutionDir)GraphicsEngine\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Lib>
-      <AdditionalLibraryDirectories>$(SolutionDir)..\Libs3rdParty\Lua\Libs\x64\;$(SolutionDir)..\Libs\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>Box2D.lib;lua53.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\Libs3rdParty\anglescript\Libs\;$(SolutionDir)..\Libs\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Box2D.lib;angelscript64d.lib</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>

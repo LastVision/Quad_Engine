@@ -1,4 +1,7 @@
 #pragma once
+#include <functional>
+
+struct asSFuncPtr;
 
 class asIScriptContext;
 class asIScriptEngine;
@@ -16,9 +19,13 @@ namespace Quad_Engine
 			static void Destroy();
 			static ScriptSystem* GetInstance();
 
+			void Init(const std::function<void()>& aRegisterCppFunction);
+
 			void LoadScript(const std::string& aFile);
 
 			void Update(const float aDeltaTime);
+
+			void RegisterFunction(const char* aFunction, const asSFuncPtr& aFunctionPtr);
 		private:
 			static ScriptSystem* myInstance;
 			ScriptSystem();

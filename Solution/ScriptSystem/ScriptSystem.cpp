@@ -20,10 +20,7 @@ void MessageCallback(const asSMessageInfo* aMessage, void* aParam)
 	printf("%s (%d, %d) : %s : %s\n", aMessage->section, aMessage->row, aMessage->col, type, aMessage->message);
 }
 
-void Print(const std::string& aString)
-{
-	printf("[Script]: %s\n", aString);
-}
+
 
 namespace Quad_Engine
 {
@@ -61,11 +58,6 @@ namespace Quad_Engine
 
 			RegisterStdString(myScriptEngine);
 
-			result = myScriptEngine->RegisterGlobalFunction("void print(const string &in)", asFUNCTION(Print), asCALL_CDECL);
-			if (result < 0)
-			{
-				printf("[ScriptSystem] Error: Failed to Register print function.\n");
-			}
 			myScriptBuilder = new CScriptBuilder();
 			myScriptContext = myScriptEngine->CreateContext();
 		}
@@ -77,6 +69,11 @@ namespace Quad_Engine
 
 			myScriptContext->Release();
 			myScriptEngine->ShutDownAndRelease();
+		}
+
+		void ScriptSystem::Init(const std::function<void()>& aRegisterCppFunction)
+		{
+			aRegisterCppFunction();
 		}
 
 		void ScriptSystem::LoadScript(const std::string& aFile)
@@ -130,6 +127,7 @@ namespace Quad_Engine
 		void ScriptSystem::Update(const float aDeltaTime)
 		{
 			myScriptContext->Prepare(myUpdateFunction);
+			myScriptContext->SetArgFloat(0, aDeltaTime);
 			int result = myScriptContext->Execute();
 			if (result != asEXECUTION_FINISHED)
 			{
@@ -138,6 +136,16 @@ namespace Quad_Engine
 					printf("[ScriptSystem] Error: An execption %s occurred.\n", myScriptContext->GetExceptionString());
 				}
 			}
+		}
+
+		void ScriptSystem::RegisterFunction(const char* aFunction,const asSFuncPtr& aFunctionPtr)
+		{
+			int result = myScriptEngine->RegisterGlobalFunction(aFunction, aFunctionPtr, asCALL_CDECL);
+			if (result < 0)
+			{
+				printf("[ScriptSystem] Error: Failed to Register %s function.\n", aFunction);
+			}
+			printf("[ScriptSystem] Registered %s function successfully!\n", aFunction);
 		}
 	}
 }

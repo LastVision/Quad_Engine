@@ -11,7 +11,7 @@ GameClient::GameClient()
 	Quad_Engine::Engine::GetInstance()->AddCallback(eEngineCallbacks::RENDER, std::bind(&GameClient::Render, this));
 
 	Quad_Engine::Script::ScriptSystem::Create();
-	//Quad_Engine::Script::ScriptSystem::GetInstance()->Init(&ScriptInterface::RegisterFunctions);
+	Quad_Engine::Script::ScriptSystem::GetInstance()->Init(&ScriptInterface::RegisterCppFunction);
 
 	myLevel = new Level();
 	
